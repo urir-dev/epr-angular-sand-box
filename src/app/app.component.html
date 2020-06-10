@@ -1,1 +1,8 @@
+<div class="nav-bar">
+    <a *ngFor="let n of navs" 
+    [routerLink]="n.path">{{n.label}}</a>
+</div>
+
 <router-outlet></router-outlet>
+
+<input type="text">

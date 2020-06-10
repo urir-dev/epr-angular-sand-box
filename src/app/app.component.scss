@@ -1,0 +1,6 @@
+.nav-bar {
+    display: grid;
+    grid-template-columns: auto auto;
+    place-content: center start;
+    column-gap: 10px;
+}
