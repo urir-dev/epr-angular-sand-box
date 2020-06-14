@@ -16,6 +16,7 @@ export class AppComponent {
     { path: 'home', label: 'My Epr' },
     { path: 'list', label: 'Employees' },
     { path: 'yonatan', label: 'Yonatan' },
+    { path: 'card', label: 'Employee Card' },
   ];
   title = 'sand-box';
 }

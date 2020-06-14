@@ -1,5 +1,6 @@
 import { Component, OnInit, OnDestroy } from '@angular/core';
 import { IEmployee } from '../employee/employee.model';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-list',
@@ -27,13 +28,17 @@ export class ListComponent implements OnInit, OnDestroy {
       lastname: 'harry',
     },
   ];
-  constructor() {
+  constructor(private router: Router) {
     console.log('List Break😂');
 
   }
   onEmployeeEdit(employee: IEmployee) {
     console.log('edit', employee);
-
+    // nav to
+    const url = 'card';
+    const url2 = 'card/' + employee.id;
+    // this.router.navigate([url, { id: employee.id }]);
+    this.router.navigate([url2]);
   }
   ngOnInit() {
   }
