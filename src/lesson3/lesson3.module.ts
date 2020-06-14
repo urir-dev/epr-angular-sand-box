@@ -5,6 +5,7 @@ import { ListComponent } from './list/list.component';
 import { EmployeeComponent } from './employee/employee.component';
 import { CommonModule } from '@angular/common';
 import { CardComponent } from './card/card.component';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
     declarations: [
@@ -14,6 +15,7 @@ import { CardComponent } from './card/card.component';
         CardComponent],
     imports: [
         CommonModule,
+        HttpClientModule,
         Lesson3RoutingModule],
     providers: []
 })

@@ -1,6 +1,7 @@
 import { Component, OnInit, OnDestroy } from '@angular/core';
 import { IEmployee } from '../employee/employee.model';
 import { Router } from '@angular/router';
+import { AppService } from '../app.service';
 
 @Component({
   selector: 'app-list',
@@ -28,7 +29,7 @@ export class ListComponent implements OnInit, OnDestroy {
       lastname: 'harry',
     },
   ];
-  constructor(private router: Router) {
+  constructor(private app: AppService) {
     console.log('List Break😂');
 
   }
@@ -38,9 +39,12 @@ export class ListComponent implements OnInit, OnDestroy {
     const url = 'card';
     const url2 = 'card/' + employee.id;
     // this.router.navigate([url, { id: employee.id }]);
-    this.router.navigate([url2]);
+    this.app.navTo(url2);
   }
   ngOnInit() {
+    const a = 4;
+    const b = 5;
+    const result = this.app.calc(a, b);
   }
 
   ngOnDestroy() {
