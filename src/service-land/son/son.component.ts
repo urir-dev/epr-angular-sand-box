@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import { FamilyService } from '../family.service';
+import { FamilyService } from '../service/family.service';
 
 @Component({
   selector: 'app-son',
