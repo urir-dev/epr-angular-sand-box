@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { FamilyService } from '../family.service';
 
 @Component({
   selector: 'app-son',
@@ -8,16 +9,18 @@ import { Router } from '@angular/router';
 })
 export class SonComponent implements OnInit {
   name: string;
-  constructor(private router: Router) {
-    this.getSpecificName();
+  public get lastname(): string {
+    return this.family.lastname;
+  }
+  constructor(private family: FamilyService) {
+    this.name = this.family.getSpecificName();
   }
 
   ngOnInit() {
+    this.family.wronglastname = 'Kemickzze';
+
+    // this.family.lastname = 'Kemickzze';
   }
-  getSpecificName() {
-    const { url, routerState } = this.router;
-    console.log(url);
-    this.name = url.replace('/', '');
-  }
+
 
 }
