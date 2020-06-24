@@ -9,12 +9,21 @@ import { CardComponent } from './card/card.component';
  * `app.component.html:
  * <router-outlet></router-outlet>`
  */
+
 const routes: Routes = [
-    { path: 'home', component: HomeComponent },
-    { path: 'list', component: ListComponent },
-    { path: 'yonatan', component: ListComponent },
-    { path: 'card', component: CardComponent },
-    { path: 'card/:id', component: CardComponent },
+    {
+        path: 'lesson3', children: [
+
+            { path: '', pathMatch: 'full', redirectTo: 'login' },
+            { path: 'home', component: HomeComponent },
+            { path: 'home', component: HomeComponent },
+            { path: 'list', component: ListComponent },
+            { path: 'yonatan', component: ListComponent },
+            { path: 'card', component: CardComponent },
+            { path: 'card/:id', component: CardComponent },
+            { path: '**', redirectTo: 'list' },
+        ]
+    },
 ];
 
 @NgModule({

@@ -4,6 +4,7 @@ import { NgModule } from '@angular/core';
 import { AppComponent } from './app.component';
 import { Lesson3Module } from '../lesson3/lesson3.module';
 import { RouterModule } from '@angular/router';
+import { ServiceLandModule } from 'src/service-land/service-land.module';
 
 @NgModule({
   declarations: [
@@ -12,7 +13,8 @@ import { RouterModule } from '@angular/router';
   imports: [
     BrowserModule,
     RouterModule,
-    Lesson3Module
+    Lesson3Module,
+    ServiceLandModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
