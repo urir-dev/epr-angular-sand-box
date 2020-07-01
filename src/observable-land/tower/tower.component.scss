@@ -1,0 +1,16 @@
+.wrapper {
+    border: solid 4px black;
+    .window {
+        background-color: black;
+        color: white;
+        width: 40%;
+        margin: auto;
+        border-radius: 50% 50% 0 0;
+        height: 100px;
+        display: grid;
+        place-content: end center;
+    }
+    height: 50vh;
+    margin: auto;
+    width: 70%;
+}

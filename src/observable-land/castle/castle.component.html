@@ -1,0 +1,9 @@
+<div class="wrapper">
+
+    <app-tower [name]="'A'" (alarm)="listenAlarm($event)"></app-tower>
+    <app-tower [name]="'B'"></app-tower>
+    <app-king></app-king>
+    <app-tower [name]="'C'" (alarm)="listenAlarm('c')"></app-tower>
+    <app-tower [name]="'D'" (alarm)="listenAlarm('yonatan')"></app-tower>
+    <app-gate></app-gate>
+</div>

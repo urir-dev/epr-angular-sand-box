@@ -1,0 +1,11 @@
+.wrapper {
+    height: 80vh;
+    background-color: rgb(163, 113, 55);
+    display: grid;
+    grid-template-columns: 2fr 2fr 1fr 2fr 2fr;
+    grid-template-rows: 2fr 1fr;
+    column-gap: 4px;
+    app-gate {
+        grid-column-start: 3;
+    }
+}
